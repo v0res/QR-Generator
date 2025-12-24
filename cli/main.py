@@ -1,7 +1,6 @@
 import os
 import sys
 
-# Добавляем путь к корню проекта, чтобы импорты работали корректно
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -13,7 +12,6 @@ def main():
 
     print("--- Запуск Batch QR Generator ---")
 
-    # 1. Загрузка данных
  
     links = read_links_from_file(INPUT_FILE)
     
@@ -23,7 +21,6 @@ def main():
 
     print(f"Найдено ссылок для обработки: {len(links)}")
 
-    # 2. Цикл генерации
   
     for i, link in enumerate(links):
         try:
