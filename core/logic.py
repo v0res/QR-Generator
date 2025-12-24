@@ -14,10 +14,8 @@ def read_links_from_file(file_path: str) -> list:
         return []
     
     with open(file_path, "r", encoding="utf-8") as f:
-        # Убираем пробелы и пустые строки
         return [line.strip() for line in f if line.strip()]
 
-# --- ФУНКЦИЯ 3: Генерация QR-кода (Ядро) ---
 def generate_qr(data: str, folder: str, filename: str):
     """Создает и сохраняет QR-код."""
     os.makedirs(folder, exist_ok=True)
